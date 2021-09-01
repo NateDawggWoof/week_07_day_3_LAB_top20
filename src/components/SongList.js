@@ -2,16 +2,23 @@ import React from 'react'
 import SongItem from './SongItem'
 
 
-const SongList = () => {
+const SongList = ({songs}) => {
+
+    const songItems=songs.map((song, index) => {
+        return <SongItem song ={song} key={index} />
+
+
+    })
 
 
 
 
     return(
-        <>
-        <h3>The list of the very best top 20 songs</h3>
-        <SongItem/>
-        </>
+        <div>
+        <ul>
+          {songItems}
+        </ul>
+      </div>
     )
 }
 

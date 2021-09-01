@@ -1,14 +1,14 @@
 import React from 'react'
 import SongList from './SongList'
 
-const SongItem = () => {
+const SongItem = ({song}) => {
 
 
 
 
 
     return (
-        <h4>The Song you really wanna hear</h4>
+        <li>Song Title {song.title.label} Artist: {song["im:artist"].label}</li>
     )
 }
 
